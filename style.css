@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@font-face{font-family:"Ponnala";font-style:normal;font-weight:400;font-display:swap;src:url("https://cdn.jsdelivr.net/fontsource/fonts/ponnala@5.3.0/telugu-400-normal.woff2") format("woff2")}
+:root{--ink:#26352d;--muted:#66756b;--paper:#f8f6ef;--card:#fffefa;--green:#476a51;--gold:#b49a5a;--line:#c9d2c5;--shadow:0 10px 28px rgba(39,57,43,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.hero{min-height:365px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 85% 10%,rgba(211,222,199,.65),transparent 35%),linear-gradient(120deg,#f8f6ef,#f0f0e5);display:flex;align-items:center;padding:56px clamp(22px,7vw,100px);border-bottom:1px solid #e4e4d8}.hero-inner{max-width:740px;position:relative;z-index:1}.eyebrow{font-size:.72rem;letter-spacing:.2em;font-weight:700;color:var(--green);margin:0 0 14px}.hero h1{font:600 clamp(2.8rem,6vw,5rem)/1.05 "Playfair Display",Georgia,serif;margin:0;letter-spacing:-.035em}.subtitle{font:500 clamp(1rem,2vw,1.25rem) "Playfair Display",Georgia,serif;color:#526650;margin:17px 0 12px}.intro{color:var(--muted);max-width:570px;line-height:1.7}.primary-btn{margin-top:14px;border:0;background:var(--green);color:white;padding:14px 20px;border-radius:7px;font-weight:600;box-shadow:0 6px 16px #476a5130}.primary-btn span{padding-left:16px}.primary-btn:hover{background:#35533e}.hero-mark{position:absolute;right:9%;top:2%;font:clamp(10rem,24vw,22rem) Georgia,serif;color:#dce4d3;transform:rotate(-20deg);line-height:1}
+main{padding:28px clamp(14px,3vw,44px) 48px}.toolbar{display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:13px}.search-wrap{position:relative;min-width:min(100%,300px);flex:1;max-width:410px;display:flex;align-items:center;background:white;border:1px solid #dfe3d9;border-radius:9px;padding:0 12px;color:var(--muted)}.search-wrap>span{font-size:1.5rem}.search-wrap input{width:100%;border:0;outline:0;padding:13px 9px;background:transparent;color:var(--ink)}.search-results{position:absolute;top:calc(100% + 5px);left:0;right:0;background:white;box-shadow:var(--shadow);border:1px solid #e2e6dd;border-radius:9px;z-index:20;max-height:270px;overflow:auto}.search-result{display:block;width:100%;text-align:left;padding:11px 14px;border:0;border-bottom:1px solid #f0f1eb;background:white;color:var(--ink)}.search-result:hover,.search-result:focus{background:#f0f4ec}.search-result small{display:block;color:var(--muted);margin-top:3px}.controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.controls select,.control-btn{background:white;border:1px solid #dce2d8;color:var(--ink);border-radius:7px;padding:10px 12px;min-height:40px}.control-btn{min-width:40px;font-size:1.1rem}.control-btn:hover,.controls select:hover{border-color:#8ea18b}.text-btn{font-size:.83rem}.tree-note{font-size:.82rem;color:var(--muted);margin:8px 0 13px;display:flex;gap:8px;align-items:center}.legend-dot{height:8px;width:8px;border-radius:50%;background:var(--gold);display:inline-block}
+.tree-viewport{height:min(70vh,780px);min-height:440px;border:1px solid #e0e3d8;border-radius:14px;background-color:#fbfaf5;background-image:radial-gradient(#d9ded3 .8px,transparent .8px);background-size:19px 19px;overflow:hidden;position:relative;cursor:grab;touch-action:none;box-shadow:inset 0 0 35px #d8ddcf30}.tree-viewport.dragging{cursor:grabbing}.tree-stage{position:absolute;left:0;top:0;width:1000px;height:700px;transform-origin:0 0}.connections{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}.edge{fill:none;stroke:#b7c5b2;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}.edge.spouse{stroke:#c7ad69;stroke-width:2.5;stroke-dasharray:4 3}.tree-nodes{position:absolute;inset:0}.person-card{position:absolute;width:156px;min-height:155px;background:var(--card);border:1px solid #e1e5db;border-radius:12px;box-shadow:0 5px 15px rgba(42,59,45,.07);padding:13px 10px 12px;text-align:center;color:var(--ink);transition:box-shadow .18s,border-color .18s,transform .18s;z-index:2}.person-card:hover,.person-card:focus-visible{border-color:#91a98c;box-shadow:var(--shadow);transform:translateY(-2px);outline:none}.person-card.highlight{outline:3px solid #c4a45c;outline-offset:2px}.person-card .avatar{width:55px;height:55px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;background:#e9eee3;color:#45634a;font:600 1rem "Playfair Display",Georgia,serif;overflow:hidden;border:2px solid #f5f2e8}.avatar img{width:100%;height:100%;object-fit:cover}.person-card .name{font-weight:700;font-size:.82rem;line-height:1.25;overflow-wrap:anywhere}.person-card .telugu-name{font-family:"Ponnala",sans-serif;font-weight:700;font-size:.82rem;line-height:1.25;margin-top:5px;overflow-wrap:anywhere;min-height:1.25em}.person-card .role{font-size:.7rem;color:var(--muted);margin-top:5px;line-height:1.3}.person-card .years{font-size:.68rem;color:#8c805d;margin-top:5px}.empty-state{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);pointer-events:none}.below-tree{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:40px 5px 8px}.below-tree h2{font:600 clamp(1.6rem,3vw,2.3rem) "Playfair Display",Georgia,serif;margin:0;max-width:500px}.below-tree>p{max-width:440px;line-height:1.7;color:var(--muted);font-size:.92rem}footer{border-top:1px solid #e1e3d9;padding:20px clamp(18px,4vw,50px);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.78rem}footer span:first-child{letter-spacing:.16em;font-weight:700;color:var(--green)}
+.backdrop{position:fixed;inset:0;background:#18251db0;z-index:40;backdrop-filter:blur(3px)}.profile-panel{position:fixed;z-index:41;right:0;top:0;height:100dvh;width:min(460px,100%);overflow:auto;background:#fcfbf6;padding:34px clamp(22px,4vw,38px);box-shadow:-18px 0 45px #18251d20;animation:slideIn .22s ease-out}.close-btn{position:absolute;right:18px;top:14px;border:0;background:#edf0e7;border-radius:50%;width:38px;height:38px;font-size:1.5rem;color:var(--ink)}.profile-hero{text-align:center;padding:22px 0 24px;border-bottom:1px solid #e5e6dc}.profile-hero .avatar{width:100px;height:100px;font-size:1.5rem;margin-bottom:14px}.profile-hero h2{font:600 2rem "Playfair Display",Georgia,serif;margin:0 0 7px}.profile-hero p{color:var(--muted);margin:0}.profile-section{padding:18px 0;border-bottom:1px solid #e9e9e0}.profile-section h3{font-size:.74rem;text-transform:uppercase;letter-spacing:.13em;color:var(--green);margin:0 0 10px}.profile-section p{margin:0;line-height:1.65;color:#526057}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.detail-label{font-size:.7rem;color:var(--muted);display:block;margin-bottom:4px}.detail-value{font-weight:600;font-size:.9rem;overflow-wrap:anywhere}.relative-link{display:block;width:100%;text-align:left;background:#f0f2e9;border:1px solid #e3e7dc;border-radius:7px;padding:10px 12px;margin:7px 0;color:var(--ink)}.relative-link:hover{border-color:#a8b7a2;background:#e8eee3}.relative-link small{display:block;color:var(--muted);margin-top:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}
+@keyframes slideIn{from{transform:translateX(25px);opacity:.5}to{transform:translateX(0);opacity:1}}
+@media(max-width:700px){.hero{min-height:350px;padding-top:48px;padding-bottom:44px}.hero-mark{right:-3%;top:15%;opacity:.55}.toolbar{align-items:stretch}.search-wrap{max-width:none;flex-basis:100%}.controls{justify-content:flex-start}.controls select{flex:1}.tree-viewport{height:64vh;min-height:430px}.below-tree{display:block;padding-top:30px}.below-tree>p{margin-top:12px}.profile-panel{padding-top:40px}footer{display:block}footer span{display:block;margin:5px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* Generation row backgrounds: subtle alternating fills behind cards and connectors. */
+.generation-bands {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.generation-band {
+  position: absolute;
+  border: 1px solid;
+  border-radius: 14px;
+  opacity: .92;
+  pointer-events: none;
+}
+.generation-band-label {
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  color: var(--generation-label-color, #607557);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.connections { z-index: 1; }
+.tree-nodes { z-index: 2; }
+.person-card {
+  min-height: 176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.person-card .children-count {
+  margin-top: 5px;
+  color: #526b57;
+  font-size: .65rem;
+  line-height: 1.25;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.person-card .role { margin-top: 5px; }
+@media print {
+  body.print-family-tree .generation-band {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+
+/* Restore gender/spouse card differentiation alongside generation row bands.
+   These rules intentionally come after the base card styles. */
+.person-card.person-card--male {
+  background: #fffefa !important;
+  border-color: #c9d9eb !important;
+}
+.person-card.person-card--male .avatar {
+  background: #e5edf7 !important;
+  color: #365b84 !important;
+  border-color: #f1f5fb !important;
+}
+.person-card.person-card--male .children-count {
+  color: #456783 !important;
+}
+
+.person-card.person-card--female {
+  background: #fff8fc !important;
+  border-color: #e8c4d8 !important;
+}
+.person-card.person-card--female .avatar {
+  background: #f6e3ed !important;
+  color: #8b456a !important;
+  border-color: #fff0f6 !important;
+}
+.person-card.person-card--female .children-count {
+  color: #925a78 !important;
+}
+
+.person-card.person-card--spouse {
+  background: #fff9eb !important;
+  border-color: #dfbd65 !important;
+}
+.person-card.person-card--spouse .avatar {
+  background: #f4e4b8 !important;
+  color: #78591c !important;
+  border-color: #fff4d4 !important;
+}
+.person-card.person-card--spouse .children-count {
+  color: #866a2b !important;
+}
+
+.person-card.person-card--unknown {
+  background: #fffefa !important;
+  border-color: #d8dfd2 !important;
+}
+.person-card.person-card--unknown .avatar {
+  background: #e9eee3 !important;
+  color: #45634a !important;
+}
+
+@media print {
+  .person-card.person-card--male,
+  .person-card.person-card--male .avatar,
+  .person-card.person-card--female,
+  .person-card.person-card--female .avatar,
+  .person-card.person-card--spouse,
+  .person-card.person-card--spouse .avatar {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+
+/* Couple grouping: each partner remains an individual clickable card, while the
+   shared outer frame and child count identify them as one family unit. */
+.connections { z-index: 1; }
+.tree-nodes { z-index: 2; }
+.couple-group {
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+  border: 1.5px solid #c7ad69;
+  border-radius: 17px;
+  background: rgba(255, 253, 246, .28);
+  pointer-events: none;
+}
+.couple-children-count {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 7px;
+  text-align: center;
+  color: #785f25;
+  font-size: .72rem;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+.person-card.person-card--paired .children-count {
+  display: none !important;
+}
+.person-card.person-card--paired {
+  z-index: 2;
+}
+@media print {
+  .couple-group {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+
+/* Couple-box refinement: no "Couple" tag; show only the shared child count
+   centered along the bottom edge of the outer frame. */
+.couple-children-count {
+  top: auto !important;
+  bottom: 7px !important;
+  padding-top: 0;
+  background: transparent;
+}
+.couple-group {
+  padding-bottom: 28px;
+}
+
+
+/* Full-canvas PDF export: hide page chrome and print the entire tree at its
+   natural stage size on a custom page, rather than the visible viewport. */
+#printPdfBtn { white-space: nowrap; }
+@media print {
+  @page { margin: 0.25in; }
+  body.print-family-tree > * { display: none !important; }
+  body.print-family-tree main,
+  body.print-family-tree main #treeViewport,
+  body.print-family-tree main #treeViewport #treeStage,
+  body.print-family-tree main #treeViewport #treeStage * {
+    visibility: visible !important;
+  }
+  body.print-family-tree main {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+  body.print-family-tree .toolbar,
+  body.print-family-tree .tree-note,
+  body.print-family-tree .below-tree,
+  body.print-family-tree .hero,
+  body.print-family-tree footer,
+  body.print-family-tree .profile-panel,
+  body.print-family-tree .backdrop {
+    display: none !important;
+  }
+  body.print-family-tree #treeViewport {
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: var(--print-width) !important;
+    height: var(--print-height) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body.print-family-tree #treeStage {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: var(--print-stage-width, var(--print-width)) !important;
+    height: var(--print-stage-height, var(--print-height)) !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    transform-origin: top left !important;
+  }
+  body.print-family-tree #generationBands,
+  body.print-family-tree #connections,
+  body.print-family-tree #treeNodes {
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+#printPdfBtn { white-space: nowrap; }
+@media (max-width: 700px) {
+  #printPdfBtn { white-space: normal; }
+}
+
+/* Main-branch selector added for focused family views. */
+#mainPersonFilter{max-width:260px;min-width:190px;font-size:.83rem}
+@media(max-width:700px){#mainPersonFilter{max-width:none;min-width:0;flex:1}}
+
+/* Bilingual family-tree disclaimer */
+.disclaimer-section{margin:28px clamp(18px,4vw,50px) 0;padding:24px 26px;border:1px solid #e1e3d9;border-radius:14px;background:#f4f3eb;display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,2fr);gap:24px;align-items:start}
+.disclaimer-heading h2{font:600 clamp(1.25rem,2.3vw,1.8rem) "Playfair Display",Georgia,serif;margin:0;color:var(--ink)}
+.disclaimer-copy p{margin:0 0 12px;color:var(--muted);font-size:.86rem;line-height:1.7}
+.disclaimer-copy p:last-child{margin-bottom:0}
+.disclaimer-copy strong{color:var(--ink)}
+@media(max-width:700px){.disclaimer-section{display:block;padding:20px;margin-left:18px;margin-right:18px}.disclaimer-copy{margin-top:16px}}
+
+/* Main branch labels: preserve Telugu names and clarify each son's position. */
+.person-card .branch-tagline{margin:3px 4px 2px;color:#526b58;font-size:10px;font-weight:700;line-height:1.25;white-space:normal}
+.person-card .branch-tagline small{display:block;margin-top:1px;color:#7a806f;font-size:9px;font-weight:500}
+.disclaimer-copy p{margin:0 0 12px;color:var(--muted);font-size:.86rem;line-height:1.75}
+.disclaimer-copy p[lang="te"]{font-family:Arial,"Noto Sans Telugu",Gautami,sans-serif}
